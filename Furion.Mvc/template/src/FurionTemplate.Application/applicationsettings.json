@@ -1,0 +1,55 @@
+﻿{
+  "SpecificationDocumentSettings": {
+    "DocumentTitle": "Furion自用模版 | 接口演示",
+    "GroupOpenApiInfos": [
+      {
+        "Group": "Default",
+        "Title": "接口演示",
+        "Description": "自用的Furion模版，喜欢就Star。",
+        "Version": "1.0.0",
+        "TermsOfService": "https://github.com/KaneLeung",
+        "Contact": {
+          "Name": "KaneLeung",
+          "Url": "https://github.com/KaneLeung",
+          "Email": "kk.xiaolan@gmail.com"
+        },
+        "License": {
+          "Name": "Apache-2.0",
+          "Url": "https://github.com/KaneLeung/Kane.Template/blob/master/LICENSE"
+        }
+      }
+    ],
+    "EnableAuthorized": true,
+    "SecurityDefinitions": [
+      {
+        "Id": "Bearer",
+        "Type": "Http",
+        "Name": "Authorization",
+        "Description": "JWT Authorization header using the Bearer scheme.",
+        "BearerFormat": "JWT",
+        "Scheme": "bearer",
+        "In": "Header",
+        "Requirement": {
+          "Scheme": {
+            "Reference": {
+              "Id": "Bearer",
+              "Type": "SecurityScheme"
+            },
+            "Accesses": []
+          }
+        }
+      }
+    ]
+  },
+  "JWTSettings": { //JWT配置
+    "ValidateIssuerSigningKey": true, // 是否验证密钥，bool 类型，默认true
+    "IssuerSigningKey": "你的密钥你的密钥你的密钥你的密钥", // 密钥，string 类型，必须是复杂密钥，长度大于16
+    "ValidateIssuer": true, // 是否验证签发方，bool 类型，默认true
+    "ValidIssuer": "签发方", // 签发方，string 类型
+    "ValidateAudience": true, // 是否验证签收方，bool 类型，默认true
+    "ValidAudience": "签收方", // 签收方，string 类型
+    "ValidateLifetime": true, // 是否验证过期时间，bool 类型，默认true，建议true
+    "ExpiredTime": 20, // 过期时间，long 类型，单位分钟，默认20分钟
+    "ClockSkew": 5 // 过期时间容错值，long 类型，单位秒，默认 5秒
+  }
+}

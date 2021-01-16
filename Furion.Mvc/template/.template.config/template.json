@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "KaneLeung",
+  "classifications": [
+    "Furion",
+    "Mvc",
+    "WebApi",
+    "RESTful",
+    "Swagger"
+  ],
+  "name": "Furion Mvc",
+  "identity": "Furion.Mvc",
+  "shortName": "furion",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "FurionTemplate",
+  "preferNameDirectory": true
+}
